@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Assignments Table</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="tables.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Assignments Details</h1>
+    
+    <form>
+
+      <div class="form-group">
+        <label>Assignment ID:</label>
+        <input type="text" name="assignmentID" maxlength="4" min="0" max="9999"  step= "1"
+        pattern="[0-9]{1,4}" placeholder="enter assignment id" class="form-control" id="assignmentID"  required="" required="">
+      </div>
+
+      <div class="form-group">
+        <label>Title:</label>
+        <input type="text" name="title" placeholder="Enter text here" maxlength="30" class="form-control" id="title" required="">
+      </div>
+
+      <div class="form-group">
+        <label>Description:</label>
+        <input type="text" name="description" placeholder="Enter text here" maxlength="30" class="form-control" id="description"  required="">
+      </div>
+      <div class="form-group">
+        <label>Sub Date Time:</label>
+        <input type="Date"  name="subDateTime"  class="form-control"  min="2020-04-01" max="2020-12-31"  id="subDateTime" required="">
+      </div>
+      <div class="form-group">
+        <label>Oral Mark:</label>
+        <input type="number" onKeyDown="if(this.value.length==2) return false;" name="oralMark"  maxlength="3" min="0" max="100"  step= "1"
+        placeholder="Enter An Integer between 0 and 100"   id="oralMark"  class="form-control" required="">
+      </div>
+      <div class="form-group">
+        <label>Total Mark:</label>
+        <input type="number" onKeyDown="if(this.value.length==2)return false;" name="totalMark"  maxlength="3" min="0" max="100"  step= "1"
+        placeholder="Enter An Integer between 0 and 100"   id="totalMark" class="form-control"  required="">
+      </div>
+      <button type="submit" id="submit" disabled onclick="return confirm('Are you sure?')" class="btn btn-success save-btn">Save</button>
+      <button   onclick="window.location.href = 'startingPage.html';" class="btn btn-success">Back To Main Page</button>
+      
+
+    </form>
+    <br/>
+    <table class="table table-bordered data-table">
+      <thead>
+        <th>Assignment Id</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Sub Date Time</th>
+        <th>Oral Mark</th>
+        <th>Total Mark</th>
+        <th width="200px">Action</th>
+      </thead>
+      <tbody>
+
+      </tbody>
+    </table>
+
+  </div>
+
+  
+  
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+  <script src="assignments.js"></script>
+</body>
+</html>

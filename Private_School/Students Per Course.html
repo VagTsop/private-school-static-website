@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Students Per Course Table</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="tables.css">
+  
+</head>
+<body>
+
+  <div class="container">
+    <h1>Students Per Course Details</h1>
+    
+    <form>
+
+
+      <div class="form-group">
+        <label>Title:</label>
+        <input type="text" name="title" maxlength="30" placeholder="Enter text here" class="form-control" id="title" required="">
+      </div>
+
+      <div class="form-group">
+        <label>Stream:</label>
+        <input type="text" name="stream" maxlength="30" placeholder="Enter text here" class="form-control" id="stream"  required="">
+      </div>
+      <div class="form-group">
+        <label>Type:</label>
+        <input type="text" name="type" maxlength="30" placeholder="Enter text here"  class="form-control" id="type" required="">
+      </div>
+      <div class="form-group">
+        <label>First Name:</label>
+        <input type="text" name="firstName" placeholder="Enter text here" id="firstName" maxlength="30" class="form-control" required="">
+      </div>
+      <div class="form-group">
+        <label>Last Name:</label>
+        <input type="text" name="lastName" placeholder="Enter text here" maxlength="30" id="lastName" class="form-control"  required="">
+      </div>
+      <button type="submit" id="submit"  disabled onclick="return confirm('Are you sure?')" class="btn btn-success save-btn">Save</button>
+      <button   onclick="window.location.href = 'startingPage.html';" class="btn btn-success">Back To Main Page</button>
+
+    </form>
+    <br/>
+    <table class="table table-bordered data-table">
+      <thead>
+        <th>Title</th>
+        <th>Stream</th>
+        <th>Type</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th width="200px">Action</th>
+      </thead>
+      <tbody>
+
+      </tbody>
+    </table>
+
+  </div>
+
+  
+
+   
+
+
+
+    
+ 
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+ <script src="studentsPerCourse.js"></script>
+
+</body>
+
+</html>

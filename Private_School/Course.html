@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Courses Table</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="tables.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Course Details</h1>
+    
+    <form>
+
+      <div class="form-group">
+        <label>Course ID:</label>
+        <input type="text" name="courseID" maxlength="4" min="0" max="9999"  step= "1"
+        pattern="[0-9]{1,4}" placeholder="Enter course id" class="form-control" id="courseID"  required="">
+      </div>
+
+      <div class="form-group">
+        <label>Title:</label>
+        <input type="text" name="title" placeholder="Enter text here" maxlength="30" class="form-control" id="title" required="">
+      </div>
+
+      <div class="form-group">
+        <label>Stream:</label>
+        <input type="text" name="stream" placeholder="Enter text here" maxlength="30" class="form-control" id="stream"  required="">
+      </div>
+      <div class="form-group">
+        <label>Type:</label>
+        <input type="text" name="type"  placeholder="Enter text here" maxlength="30"   class="form-control"  id="type"  required="">
+      </div>
+
+      <button type="submit" id="submit"  disabled onclick="return confirm('Are you sure?')" class="btn btn-success save-btn">Save</button>
+      <button   onclick="window.location.href = 'startingPage.html';" class="btn btn-success">Back To Main Page</button>
+
+    </form>
+    <br/>
+    <table class="table table-bordered data-table">
+      <thead>
+        <th>Course ID</th>
+        <th>Title</th>
+        <th>Stream</th>
+        <th>Type</th>
+        <th width="200px">Action</th>
+      </thead>
+      <tbody>
+
+      </tbody>
+    </table>
+
+  </div>
+
+  
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="course.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Students Table</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="tables.css">
+ 
+
+</head>
+<body>
+
+  <div class="container">
+    <h1>Students Details</h1>
+    
+    <form>
+      <div class="form-group">
+        <label>Student ID:</label>
+        <input type="text" name="studentID" maxlength="4" min="0" max="9999"  step= "1"placeholder="enter student ID"  pattern="[0-9]{1,4}"  class="form-control" id="studentID"   required="">
+      </div>
+
+      <div class="form-group">
+        <label>First Name:</label>
+        
+        <input type="text" name="firstName"    placeholder="Enter text here" maxlength="30" class="form-control" id="firstName" required=""> 
+      </div>
+
+      <div class="form-group">
+        <label>Last Name:</label>
+        <input type="text" name="lastName"  placeholder="Enter text here" maxlength="30" class="form-control" id="lastName" required="" >  
+      </div>
+      <div class="form-group">
+        <label>Date Of Birth:</label>
+        <input type="Date"  name="dateOfBirth" min='1930-01-01' class="form-control"  id="dateOfBirth" required="">
+      </div>
+
+
+      
+      <button type="submit" id="submit"  disabled onclick="return confirm('Are you sure?')"  class="btn btn-success save-btn">Save</button>
+
+      <button   onclick="window.location.href = 'startingPage.html';" class="btn btn-success">Back To Main Page</button>
+
+    </form>
+    <br/>
+    <table class="table table-bordered data-table">
+      <thead>
+        <th>Student ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Date Of Birth</th>
+        <th width="200px">Action</th>
+      </thead>
+      <tbody>
+
+      </tbody>
+    </table>
+
+  </div>
+  
+ 
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="students.js"></script>
+</body>
+
+
+</html>
